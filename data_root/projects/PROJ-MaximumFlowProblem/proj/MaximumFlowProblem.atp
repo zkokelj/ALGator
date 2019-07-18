@@ -1,0 +1,17 @@
+{"Project": {
+  "Name": "MaximumFlowProblem",
+  "Description": "short_project_description",
+  "Author": "author_name",
+  "Date": "07, 2019",
+  "Algorithms": ["FordFulkerson"],
+  "TestSets": [],
+  "ProjectJARs": [],
+  "AlgorithmJARs": [],
+  "EMExecFamily": "",
+  "CNTExecFamily": "",
+  "JVMExecFamily": "",
+  "ProjPresenters": [],
+  "AlgPresenters": [],
+  "MainProjPresenters": [],
+  "MainAlgPresenters": []
+}}
