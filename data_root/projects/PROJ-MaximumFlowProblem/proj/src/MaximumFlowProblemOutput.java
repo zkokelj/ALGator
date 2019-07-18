@@ -7,17 +7,16 @@ import si.fri.algotest.execute.AbstractTestCase;
  */
 public class MaximumFlowProblemOutput extends AbstractOutput {
 
-  // TODO: define fields to hold the output data of an algorithm
-  // ...
-  
-  public MaximumFlowProblemOutput(/* TODO: define appropriate constructor parameters */) {    
-    // this.parameter = parameter;
+  double maximimFlow;
+
+  public MaximumFlowProblemOutput(int maximimFlow) {    
+    this.maximimFlow = maximimFlow;
   }
   
   
   @Override
   public String toString() {
-    // TODO: provide a handy MaximumFlowProblemOutput string representation (include only important data)
+    System.out.println("Maximum flow is: " + this.maximimFlow);
     return super.toString();
   }
   
