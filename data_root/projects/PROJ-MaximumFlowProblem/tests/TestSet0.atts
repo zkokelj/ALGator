@@ -1,0 +1,13 @@
+{
+  "TestSet": {
+    "Name"             : "TestSet0",
+
+    "ShortName"        : "TS0",
+    "Description"      : "Basic tests for maximum flow problem",
+    "N"                : "1",
+    "TestRepeat"       : "1",
+    "TimeLimit"        : "5",
+
+    "TestSetDescHTML"  : "TestSet0.html"
+  }
+}

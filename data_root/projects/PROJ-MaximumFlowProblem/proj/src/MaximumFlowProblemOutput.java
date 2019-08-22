@@ -9,8 +9,8 @@ public class MaximumFlowProblemOutput extends AbstractOutput {
 
   double maximimFlow;
 
-  public MaximumFlowProblemOutput(int maximimFlow) {    
-    this.maximimFlow = maximimFlow;
+  public MaximumFlowProblemOutput(int maximumFlow) {    
+    this.maximumFlow = maximumFlow;
   }
   
   
