@@ -52,7 +52,7 @@ public class MaximumFlowProblemTestCase extends AbstractTestCase {
     String group     = inputParameters.getVariable("Group",   "RND").getStringValue().toUpperCase();              
     String filename = inputParameters.getVariable("Filename", "").getStringValue();              
     
-    Graph g = null;
+    int[][] g = null;
     int numOfNodes = 0;
     int source = 0;
     int sink = 0;
@@ -63,7 +63,7 @@ public class MaximumFlowProblemTestCase extends AbstractTestCase {
       source = MaximumFlowProblemTools.readSource(path, filename);
       sink = MaximumFlowProblemTools.readSink(path, filename);
       result = MaximumFlowProblemTools.readResult(path, filename);
-      g = MaximumFlowProblemTools.readGraph(path, filename);
+      g = MaximumFlowProblemTools.readGraph(path, filename, numOfNodes);
     }else{
       System.out.println("ERROR IN TEST FILE!");
     }

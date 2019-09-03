@@ -7,20 +7,30 @@ import si.fri.algotest.execute.AbstractTestCase;
  */
 public class MaximumFlowProblemOutput extends AbstractOutput {
 
-  double maximimFlow;
+  int[][] g;
+  int flow;
 
-  public MaximumFlowProblemOutput(int maximumFlow) {    
-    this.maximumFlow = maximumFlow;
+  public MaximumFlowProblemOutput(int[][] g, int flow) {    
+    this.g = g;
+    this.flow = flow;
   }
   
   
   @Override
   public String toString() {
-    System.out.println("Maximum flow is: " + this.maximimFlow);
+    System.out.println("Maximum flow is: " + this.flow);
+    for (int[] x : this.g)
+    {
+        for (int y : x)
+        {
+            System.out.print(y + " ");
+        }
+        System.out.println();
+    }
     return super.toString();
   }
   
-  
+  //TODO: Popravi to metodo, da bo upostevala vse indikatorje
   @Override
   protected Object getIndicatorValue(AbstractTestCase testCase, AbstractOutput algorithmOutput, String indicatorName) {
     MaximumFlowProblemTestCase maximumFlowProblemTestCase        = (MaximumFlowProblemTestCase) testCase;
