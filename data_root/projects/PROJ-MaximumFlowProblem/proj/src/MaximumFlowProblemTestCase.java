@@ -5,6 +5,28 @@ import si.fri.algotest.execute.AbstractTestCase;
  *
  * @author Ziga Kokelj
  */
+
+// dodala sem spodnji razred, da ni potrebno napisati več funkcij za branje ampak le no
+// funkcija za branje vrne instanco tega razreda, ki vsebuje vse potrebne podatke
+// (trenutno ne vem ali mora bit ta razred definiran v obeh datotekah: v tej in v datoteki tools.java ali je dovolj le v eni od njiju?)
+class StoreFromFile {
+  int s;
+  int t;
+  double flow;
+  int n;
+  //int [][] g;
+  double [][] g;
+
+  StoreFromFile(int n_param, double [][] g_param, int s_param, int t_param, double flow_param)
+  {
+    s = s_param;
+    t = t_param;
+    n = n_param;
+    flow = flow_param;
+    g = g_param;
+  }
+}
+
 public class MaximumFlowProblemTestCase extends AbstractTestCase {
 
   @Override
@@ -20,7 +42,7 @@ public class MaximumFlowProblemTestCase extends AbstractTestCase {
   
 
   @Override
-  public MaximumFlowProblemTestCase getTestCase(String testCaseDescriptionLine, String path) {    
+  public MaximumFlowProblemTestCase getTestCase(String testCaseDescriptionLine, String path) {
     // create a set of variables ...
     Variables inputParameters = new Variables();
     inputParameters.setVariable("Path", path);
@@ -58,6 +80,22 @@ public class MaximumFlowProblemTestCase extends AbstractTestCase {
     int sink = 0;
     int result = 0;
 
+    // dodala primer branja datoteke:
+    //String path je absolutna pot
+    StoreFromFile reads = MaximumFlowProblemTools.readFile(path, fileName);
+    System.out.println("n " + reads.n);
+    System.out.println("g " + Arrays.deepToString(reads.g));
+    System.out.println("s " + reads.s);
+    System.out.println("t " + reads.t);
+    System.out.println("flow " + reads.flow);
+    
+    n = reads.n;
+    g = reads.g;
+    s = reads.s;
+    t = reads.t;
+    flow = reads.flow;
+    
+    // tole spodnje gre potem ven
     if (group.equals("FILE")){
       numOfNodes = MaximumFlowProblemTools.readNumOfNodes(path, filename);
       source = MaximumFlowProblemTools.readSource(path, filename);
