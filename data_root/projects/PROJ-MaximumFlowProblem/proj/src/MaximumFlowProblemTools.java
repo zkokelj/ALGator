@@ -14,12 +14,12 @@ import java.util.Scanner;
 class StoreFromFile {
     int s;
     int t;
-    double flow;
+    int flow;
+    //double flow;
     int n;
-    //int [][] g;
-    double [][] g;
-
-    StoreFromFile(int n_param, double [][] g_param, int s_param, int t_param, double flow_param)
+    int [][] g;
+    //double [][] g;
+    StoreFromFile(int n_param, int [][] g_param, int s_param, int t_param, int flow_param)
     {
         s = s_param;
         t = t_param;
@@ -29,30 +29,25 @@ class StoreFromFile {
     }
 }
 
+
 class MaximumFlowProblemTools{
 
     public static StoreFromFile readFile(String path, String fileName) {
         try {
-            System.out.println(path + File.separator + fileName);
+            //System.out.println(path + File.separator + fileName);
             Scanner sc = new Scanner(new File(path + File.separator + fileName));
-            
-            //source and sink node
             int s = Integer.parseInt(sc.nextLine().trim().split(" ")[1]);
             int t = Integer.parseInt(sc.nextLine().trim().split(" ")[1]);
-            
-            // max flow value
-            //int flow = Integer.parseInt(sc.nextLine().trim().split(" ")[2]);
-            double flow = Double.parseDouble(sc.nextLine().trim().split(" ")[2]);
-            
-            //number of nodes
+            int flow = Integer.parseInt(sc.nextLine().trim().split(" ")[2]);
+            //double flow = Double.parseDouble(sc.nextLine().trim().split(" ")[2]);
             int n = Integer.parseInt(sc.nextLine().trim().split(" ")[1]);
 
-            for (int i = 0; i < n; i++)
-                sc.nextLine(); //all the node lines //
+            //for (int i = 0; i < n; i++)
+            //    sc.nextLine(); //all the node lines
 
             sc.nextLine(); //*arcs line
-            
-            /*
+
+
             int[][] g = new int[n][n];
             //At the beginning set all flows to 0
             for (int i = 0; i < n; i++){
@@ -60,7 +55,8 @@ class MaximumFlowProblemTools{
                     g[i][j] = 0;
                 }
             }
-            */
+
+            /*
             double[][] g = new double[n][n];
             //At the beginning set all flows to 0
             for (int i = 0; i < n; i++){
@@ -68,6 +64,7 @@ class MaximumFlowProblemTools{
                     g[i][j] = 0.0;
                 }
             }
+            */
 
             while (sc.hasNextLine()) {
                 String line = sc.nextLine().trim();
@@ -77,17 +74,17 @@ class MaximumFlowProblemTools{
 
                 int from = Integer.parseInt(line.split(" ")[0]);
                 int to = Integer.parseInt(line.split(" ")[1]);
-                //int capacity = Integer.parseInt(line.split(" ")[2]);
-                double capacity = Double.parseDouble(sc.nextLine().trim().split(" ")[2]);
+                int capacity = Integer.parseInt(line.split(" ")[2]);
+                //double capacity = Double.parseDouble(sc.nextLine().trim().split(" ")[2]);
                 g[from][to] = capacity;
 
             }
             sc.close();
-            //System.out.println(Arrays.deepToString(g));
+
+            System.out.println(Arrays.deepToString(g));
             return new StoreFromFile(n, g, s, t, flow);
         } catch (Exception e) {
-            return null; // morda bi bilo kle bolje vrnt kaj drugega?
+            return new StoreFromFile(0, null, 0, 0, 0);
         }
-
     }
 }

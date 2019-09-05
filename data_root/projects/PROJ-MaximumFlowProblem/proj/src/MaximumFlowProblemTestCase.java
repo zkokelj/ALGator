@@ -10,21 +10,21 @@ import si.fri.algotest.execute.AbstractTestCase;
 // funkcija za branje vrne instanco tega razreda, ki vsebuje vse potrebne podatke
 // (trenutno ne vem ali mora bit ta razred definiran v obeh datotekah: v tej in v datoteki tools.java ali je dovolj le v eni od njiju?)
 class StoreFromFile {
-  int s;
-  int t;
-  double flow;
-  int n;
-  //int [][] g;
-  double [][] g;
-
-  StoreFromFile(int n_param, double [][] g_param, int s_param, int t_param, double flow_param)
-  {
-    s = s_param;
-    t = t_param;
-    n = n_param;
-    flow = flow_param;
-    g = g_param;
-  }
+    int s;
+    int t;
+    int flow;
+    //double flow;
+    int n;
+    int [][] g;
+    //double [][] g;
+    StoreFromFile(int n_param, int [][] g_param, int s_param, int t_param, int flow_param)
+    {
+        s = s_param;
+        t = t_param;
+        n = n_param;
+        flow = flow_param;
+        g = g_param;
+    }
 }
 
 public class MaximumFlowProblemTestCase extends AbstractTestCase {
@@ -83,12 +83,11 @@ public class MaximumFlowProblemTestCase extends AbstractTestCase {
     // dodala primer branja datoteke:
     //String path je absolutna pot
     StoreFromFile reads = MaximumFlowProblemTools.readFile(path, fileName);
-    System.out.println("n " + reads.n);
-    System.out.println("g " + Arrays.deepToString(reads.g));
-    System.out.println("s " + reads.s);
-    System.out.println("t " + reads.t);
-    System.out.println("flow " + reads.flow);
-    
+    //System.out.println("n " + reads.n);
+    //System.out.println("g " + Arrays.deepToString(reads.g));
+    //System.out.println("s " + reads.s);
+    //System.out.println("t " + reads.t);
+    //System.out.println("flow " + reads.flow);
     n = reads.n;
     g = reads.g;
     s = reads.s;
