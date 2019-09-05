@@ -83,14 +83,22 @@ public class FordFulkersonAlgorithm extends MaximumFlowProblemAbsAlgorithm {
           max_flow += path_flow;
       }
       for(int i = 0; i < n; i++){
-          for(int j = 0; j < n; j++){
-            graph[i][j] = Math.max(graph[i][j]-rGraph[i][j],0);
-          }
-      }
+        for(int j = 0; j < n; j++){
+            //rGraph[i][j] =  graph[i][j]-rGraph[i][j];
+            int value = graph[i][j];
+            if (graph[i][j] != 0 && rGraph[i][j] != 0){
+                 value = graph[i][j] - rGraph[i][j];
+            }
+            rGraph[i][j] = value;
+        }
+        //System.out.println();
+    }
+    // Return the overall flow
+    return rGraph;
       //TODO: Is it ok to assume, that there is no path from souce back to source?
       //We save max flow in (0, 0) in the matrix (flow from source to the same source).
-      graph[0][0] = max_flow;
+      rGraph[0][0] = max_flow;
 
-      return graph;
+      return rGraph;
   }
 }
