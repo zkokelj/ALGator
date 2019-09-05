@@ -1,7 +1,7 @@
 {
   "Algorithm" : {	
 
-   "Name"           : "EdmondsKarp",
+   "Name"           : "Dinics",
    "ShortName"      : "algorithm_short_name",             
    "Description"    : "algorithm_dascription",
    "Author"         : "author_name",
