@@ -105,7 +105,7 @@ public class MaximumFlowProblemTestCase extends AbstractTestCase {
       System.out.println("ERROR IN TEST FILE!");
     }
 
-    // TODO: create a test case 
+    // Create a test case 
     MaximumFlowProblemTestCase maximumFlowProblemTestCase = new MaximumFlowProblemTestCase();                
     maximumFlowProblemTestCase.setInput(new MaximumFlowProblemInput(g, source, sink));    
     maximumFlowProblemTestCase.getInput().setParameters(inputParameters);    
