@@ -7,8 +7,8 @@ import static java.lang.Math.min;
 import java.util.*;
 
 
-public class EdmondsKarp {
-    
+public class EdmondsKarpAlgorithm extends MaximumFlowProblemAbsAlgorithm {
+
     @Override
     protected MaximumFlowProblemOutput execute(MaximumFlowProblemInput input) {
 
@@ -17,7 +17,7 @@ public class EdmondsKarp {
         int s = input.s;
         int t = input.t;
 
-        EdmondsKarp.NetworkFlowSolverBase solver = new EdmondsKarp.EdmondsKarpSolver(numberOfNodes, s, t);
+        EdmondsKarpAlgorithm.NetworkFlowSolverBase solver = new EdmondsKarpAlgorithm.EdmondsKarpSolver(numberOfNodes, s, t);
         solver.addEdges(adjMatrix, numberOfNodes);
         int flow = solver.getMaxFlow();
         int [][] resultAdjMatrix = solver.getAdjMatrix(numberOfNodes);
@@ -148,8 +148,8 @@ public class EdmondsKarp {
                 }
             }
 
-            for (List<EdmondsKarp.Edge> edges : graph)
-                for (EdmondsKarp.Edge e : edges)
+            for (List<EdmondsKarpAlgorithm.Edge> edges : graph)
+                for (EdmondsKarpAlgorithm.Edge e : edges)
                     if (!e.isResidual()) {
                         g[e.from][e.to] = e.flow;
                     }
@@ -255,4 +255,3 @@ public class EdmondsKarp {
     }
 
 }
-

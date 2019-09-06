@@ -6,10 +6,9 @@ import si.fri.algotest.execute.AbstractTestCase;
  * @author Ziga Kokelj
  */
 
-// dodala sem spodnji razred, da ni potrebno napisati več funkcij za branje ampak le no
-// funkcija za branje vrne instanco tega razreda, ki vsebuje vse potrebne podatke
-// (trenutno ne vem ali mora bit ta razred definiran v obeh datotekah: v tej in v datoteki tools.java ali je dovolj le v eni od njiju?)
-class StoreFromFile {
+// spodnji razred se uporablja pri branju, ne vem ali je ok, da je tu
+// ta razred je kopija razrda iz tools.java, ker ne vem, kako ga importat sem notr
+class StoreDataFromFile {
     int s;
     int t;
     int flow;
@@ -17,7 +16,7 @@ class StoreFromFile {
     int n;
     int [][] g;
     //double [][] g;
-    StoreFromFile(int n_param, int [][] g_param, int s_param, int t_param, int flow_param)
+    StoreDataFromFile(int n_param, int [][] g_param, int s_param, int t_param, int flow_param)
     {
         s = s_param;
         t = t_param;
@@ -74,36 +73,30 @@ public class MaximumFlowProblemTestCase extends AbstractTestCase {
     String group     = inputParameters.getVariable("Group",   "RND").getStringValue().toUpperCase();              
     String filename = inputParameters.getVariable("Filename", "").getStringValue();              
     
+    //inicialization if something goes wrong with file
     int[][] g = null;
     int numOfNodes = 0;
     int source = 0;
     int sink = 0;
     int result = 0;
-
-    // dodala primer branja datoteke:
-    //String path je absolutna pot
-    StoreFromFile reads = MaximumFlowProblemTools.readFile(path, fileName);
-    //System.out.println("n " + reads.n);
-    //System.out.println("g " + Arrays.deepToString(reads.g));
-    //System.out.println("s " + reads.s);
-    //System.out.println("t " + reads.t);
-    //System.out.println("flow " + reads.flow);
-    n = reads.n;
-    g = reads.g;
-    s = reads.s;
-    t = reads.t;
-    flow = reads.flow;
     
-    // tole spodnje gre potem ven
     if (group.equals("FILE")){
-      numOfNodes = MaximumFlowProblemTools.readNumOfNodes(path, filename);
-      source = MaximumFlowProblemTools.readSource(path, filename);
-      sink = MaximumFlowProblemTools.readSink(path, filename);
-      result = MaximumFlowProblemTools.readResult(path, filename);
-      g = MaximumFlowProblemTools.readGraph(path, filename, numOfNodes);
+      //String path je absolutna pot
+      StoreDataFromFile data = MaximumFlowProblemTools.readFile(path, fileName);
+      //System.out.println("n " + data.n);
+      //System.out.println("g " + Arrays.deepToString(data.g));
+      //System.out.println("s " + data.s);
+      //System.out.println("t " + data.t);
+      //System.out.println("flow " + data.flow);
+      numOfNodes = data.n;
+      g = data.g;
+      source = data.s;
+      sink = data.t;
+      flow = data.flow;
     }else{
       System.out.println("ERROR IN TEST FILE!");
     }
+    
 
     // Create a test case 
     MaximumFlowProblemTestCase maximumFlowProblemTestCase = new MaximumFlowProblemTestCase();                

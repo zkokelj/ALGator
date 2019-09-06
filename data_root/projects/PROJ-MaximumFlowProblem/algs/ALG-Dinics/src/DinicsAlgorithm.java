@@ -7,7 +7,7 @@ import static java.lang.Math.min;
 import java.util.*;
 
 
-public class Dinics {
+public class DinicsAlgorithm extends MaximumFlowProblemAbsAlgorithm {
 
     @Override
     protected MaximumFlowProblemOutput execute(MaximumFlowProblemInput input) {
@@ -17,7 +17,7 @@ public class Dinics {
         int s = input.s;
         int t = input.t;
 
-        Dinics.NetworkFlowSolverBase solver = new Dinics.DinicsSolver(numberOfNodes, s, t);
+        DinicsAlgorithm.NetworkFlowSolverBase solver = new DinicsAlgorithm.DinicsSolver(numberOfNodes, s, t);
         solver.addEdges(adjMatrix, numberOfNodes);
         int flow = solver.getMaxFlow();
         int [][] resultAdjMatrix = solver.getAdjMatrix(numberOfNodes);
@@ -50,7 +50,6 @@ public class Dinics {
             flow += bottleNeck;
             residual.flow -= bottleNeck;
         }
-
     }
 
     abstract static class NetworkFlowSolverBase {
@@ -139,8 +138,8 @@ public class Dinics {
                 }
             }
 
-            for (List<Dinics.Edge> edges : graph)
-                for (Dinics.Edge e : edges)
+            for (List<DinicsAlgorithm.Edge> edges : graph)
+                for (DinicsAlgorithm.Edge e : edges)
                     if (!e.isResidual()) {
                         g[e.from][e.to] = e.flow;
                         //System.out.println(e.toString(s, t));

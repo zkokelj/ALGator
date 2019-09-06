@@ -8,10 +8,8 @@ import java.util.Scanner;
  * @author Romi Koželj
  */
 
-// dodala sem spodnji razred, da ni potrebno napisati več funkcij za branje ampak le no
-// funkcija za branje vrne instanco tega razreda, ki vsebuje vse potrebne podatke
-// (ne vem ali mora bit ta razred definiran v obeh datotekah: v tej in v datoteki testcase.java ali je dovolj le v eni od njiju?)
-class StoreFromFile {
+// spodnji razred se uporablja pri branju, ne vem ali je ok, da je tu ali mora biti del spodnjega razreda?
+class StoreDataFromFile {
     int s;
     int t;
     int flow;
@@ -19,7 +17,7 @@ class StoreFromFile {
     int n;
     int [][] g;
     //double [][] g;
-    StoreFromFile(int n_param, int [][] g_param, int s_param, int t_param, int flow_param)
+    StoreDataFromFile(int n_param, int [][] g_param, int s_param, int t_param, int flow_param)
     {
         s = s_param;
         t = t_param;
@@ -30,9 +28,9 @@ class StoreFromFile {
 }
 
 
-class MaximumFlowProblemTools{
+public class MaximumFlowProblemTools{
 
-    public static StoreFromFile readFile(String path, String fileName) {
+    public static StoreDataFromFile readFile(String path, String fileName) {
         try {
             //System.out.println(path + File.separator + fileName);
             Scanner sc = new Scanner(new File(path + File.separator + fileName));
@@ -81,10 +79,10 @@ class MaximumFlowProblemTools{
             }
             sc.close();
 
-            System.out.println(Arrays.deepToString(g));
-            return new StoreFromFile(n, g, s, t, flow);
+            //System.out.println(Arrays.deepToString(g));
+            return new StoreDataFromFile(n, g, s, t, flow);
         } catch (Exception e) {
-            return new StoreFromFile(0, null, 0, 0, 0);
+            return new StoreDataFromFile(0, null, 0, 0, 0);
         }
     }
 }
