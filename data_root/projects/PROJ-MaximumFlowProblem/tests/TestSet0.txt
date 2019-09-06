@@ -1,1 +1,2 @@
-test1:FILE:10:testset0/TestSet0_0.txt
+test0:FILE:10:TestSet0/TestSet0_0.txt
+test1:FILE:11:TestSet0/TestSet0_1.txt
