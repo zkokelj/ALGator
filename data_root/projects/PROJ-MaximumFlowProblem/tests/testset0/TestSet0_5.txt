@@ -1,0 +1,13 @@
+source 0
+sink 9
+max flow 28
+*vertices 10
+*arcs from to capacity
+1 9 4
+2 9 9
+3 6 1
+4 7 4
+5 8 6
+6 9 1
+7 9 6
+8 9 5
