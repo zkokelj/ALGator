@@ -1,3 +1,12 @@
 <html>
-    ... please edit %thisfile% to provide a detailed description of the Dinics algorithm for the MaximumFlowProblem project.
+   
+    <p>Dinic’s algorithm is a way of implementing the Edmonds-Karp algorithm. 
+    The running time is O(V^2E) which improves the O(VE^2) of the Edmonds-Karp algorithm.
+    The basic idea is to compute all the augmenting paths that have a certain number of edges at
+    once, in what is called a blocking flow computation. Each iteration of this process increases
+    the length of the shortest path from source to sink by at least 1. So the number of iterations is at
+    most n.</p>
+    
+    <p>In each phase the algorithms builds a layered graph with breadth-first search on the residual graph. 
+    The maximum flow in a layered graph can be calculated in O(VE) time.</p>
 </html>

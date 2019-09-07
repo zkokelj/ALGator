@@ -1,9 +1,17 @@
 <html>
-    Test set containing graphs with number of nodes from 500 to 10 000 where each node has indegree and outdegree at least one, except source node has 
-    indegree 0 and sink node has outdegree 0. For each node (when it reaches indegree 1) the probability that another ingoing edge is created is 
-    50%. If another ingoing edge is created, the next ingoing edge is created with the same probabilty. The same for outgoing edges. For the source node
-    only outgoing edges are created and for the sink node only ingoing edges. When current node is source node, the probabilty for every other outgoing edge is 
-    90%, and the same for ingoing edges for sink. When selecting to and from which node the current node is connected source
-    and sink node have 10% more chances to be chosen then the rest of the nodes. (To ensure high number of paths from source and to sink node.)
-    For each size testset contains 5 different test cases.
+    <p>Test set containing graphs with number of nodes from 500 to 10 000 where each node has indegree and outdegree at least 1, except source node has 
+    indegree 0 and sink node has outdegree 0. </p>
+    
+    <p>For each node (when it reaches indegree 1) the probability that another ingoing edge is created is 50%. 
+    If another ingoing edge is created, the next ingoing edge is created with the same probabilty. The same holds for outgoing edges. 
+    For the source node only outgoing edges are created and for the sink node only ingoing edges are created. 
+    When current node is source node, the probabilty for every other outgoing edge is 90% and the same for ingoing edges for sink. </p>
+    
+    <p>When selecting to and from which node the current node is connected, source and sink node have 10% more chances to be chosen, 
+    then the rest of the nodes. (To ensure high number of paths from source and to sink node.)</p>
+    
+    <p>Capacity value for each edge is chosen from integer values from 1 to number of nodes in a graph.<p/>
+    
+    <p>For each size testset contains 5 different test cases.</p>
+    
 </html>
