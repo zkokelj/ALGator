@@ -1,6 +1,6 @@
 source 0
 sink 9
-max flow 28
+max flow 0
 *vertices 10
 *arcs from to capacity
 1 9 4

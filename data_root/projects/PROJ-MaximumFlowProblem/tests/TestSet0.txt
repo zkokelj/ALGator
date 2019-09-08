@@ -1,7 +1,10 @@
-test0:FILE:10:TestSet0/TestSet0_0.txt
-test1:FILE:11:TestSet0/TestSet0_1.txt
-test2:FILE:7:TestSet0/TestSet0_2.txt
-test3:FILE:10:TestSet0/TestSet0_3.txt
-test4:FILE:10:TestSet0/TestSet0_4.txt:UNCONNECTED
-test5:FILE:10:TestSet0/TestSet0_5.txt:UNCONNECTED
-test6:FILE:7:TestSet0/TestSet0_6.txt:UNCONNECTED
+test0:FILE:10:8:TestSet0/TestSet0_0.txt
+test1:FILE:11:18:TestSet0/TestSet0_1.txt
+test2:FILE:7:12:TestSet0/TestSet0_2.txt
+test3:FILE:10:14:TestSet0/TestSet0_3.txt
+test4:FILE:10:8:TestSet0/TestSet0_4.txt:SINK UNCONNECTED
+test5:FILE:10:8:TestSet0/TestSet0_5.txt:SOURCE UNCONNECTED
+test6:FILE:7:7:TestSet0/TestSet0_6.txt:UNCONNECTED IN THE MIDDLE
+test7:FILE:10:9:TestSet0/TestSet0_7.txt:FORWARD LINE
+test8:FILE:10:9:TestSet0/TestSet0_8.txt:FORWARD LINE
+test9:FILE:10:9:TestSet0/TestSet0_9.txt:FORWARD LINE

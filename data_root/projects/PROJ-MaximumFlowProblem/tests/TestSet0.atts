@@ -3,7 +3,7 @@
     "Name"             : "TestSet0",
     "ShortName"        : "TS0",
     "Description"      : "Basic tests",
-    "N"                : "7",
+    "N"                : "10",
     "TestRepeat"       : "1",
     "TimeLimit"        : "1",
     "TestSetFiles"     : ["TestSet0/*"]
