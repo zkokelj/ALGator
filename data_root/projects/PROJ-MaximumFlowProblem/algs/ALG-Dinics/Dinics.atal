@@ -2,7 +2,7 @@
   "Algorithm" : {	
 
    "Name"           : "Dinics",           
-   "Description"    : "A strongly polynomial algorithm for computing the maximum flow in a flow network",
+   "Description"    : "A strongly polynomial algorithm for computing the maximum flow in a flow network.",
    "Author"         : "Romi",
    "Date"           : "09, 2019",
 
