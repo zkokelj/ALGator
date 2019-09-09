@@ -1,21 +1,36 @@
 import si.fri.algotest.execute.AbstractInput;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * @author ...
+ * @author Ziga Kokelj
  */
 public class MaximumFlowProblemInput extends AbstractInput {
 
-  // TODO: define fields to hold the input data of an algorithm
-  // ...
-
+  int n;
+  int [][] g; //graph
+  int s;      //source
+  int t;      //sink
   
-  public MaximumFlowProblemInput(/* TODO: define appropriate constructor parameters */) {    
-    // this.parameter = parameter;
+  public MaximumFlowProblemInput(int n, int[][] g, int s, int t) {    
+    this.g = g;
+    this.s = s;
+    this.t = t;
+    this.n = n;
   }
       
   @Override
   public String toString() {
-    // TODO: provide a handy MaximumFlowProblemInput string representation (include only important data)
+    System.out.println("Maximum flow between verices:" + this.s + " and " + this. t);
+    for (int[] x : g)
+        {
+            for (int y : x)
+            {
+                System.out.print(y + " ");
+            }
+            System.out.println();
+        }
+    
     return super.toString();
   }
 }

@@ -20,11 +20,15 @@
        "Subtype"     : {"ID" : 0, "STAT": "MIN"}        
       },
       {
+       "Name"        : "QualityOfResult",             
+       "Description" : "Quality of result", 
+       "Type"        : "int"       
+      },
+      {
        "Name"        : "Check",             
-       "Description" : "The correctness of the algorithm (OK or NOK)", 
+       "Description" : "The correctness of the algorithm (OK or NOK). It looks if returned flow is possible in the graph.", 
        "Type"        : "string"       
       }
     ]
   }
 }
- 

@@ -2,7 +2,7 @@ import si.fri.algotest.execute.AbstractAlgorithm;
 
 /**
  *
- * @author ...
+ * @author Ziga Kokelj
  */
 public abstract class MaximumFlowProblemAbsAlgorithm extends AbstractAlgorithm {
  
