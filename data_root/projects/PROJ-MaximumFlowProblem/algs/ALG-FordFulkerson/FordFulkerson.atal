@@ -1,10 +1,9 @@
 {
   "Algorithm" : {	
 
-   "Name"           : "FordFulkerson",
-   "ShortName"      : "algorithm_short_name",             
-   "Description"    : "algorithm_dascription",
-   "Author"         : "author_name",
+   "Name"           : "FordFulkerson",           
+   "Description"    : "A greedy algorithm that computes the maximum flow in a flow network.",
+   "Author"         : "Romi",
    "Date"           : "09, 2019",
 
 

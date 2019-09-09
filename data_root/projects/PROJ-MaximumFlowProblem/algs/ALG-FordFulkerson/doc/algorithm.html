@@ -1,3 +1,10 @@
 <html>
-    ... please edit %thisfile% to provide a detailed description of the FordFulkerson algorithm for the MaximumFlowProblem project.
+ 
+    <p> The idea behind the algorithm is as follows: as long as there is a path from the source (start node) 
+    to the sink (end node), with available capacity on all edges in the path, we send flow along one of the paths. 
+    Then we find another path, and so on. A path with available capacity is called an augmenting path.</p>
+    
+    <p>Time Complexity: O(f*E), where f is the maximum flow and E is the number of edges. 
+    This is because each augmenting path can be found in O(E) time and increases the flow by an integer amount which is at least 1. </p>
+
 </html>
