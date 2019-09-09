@@ -9,7 +9,7 @@ import si.fri.algotest.global.ErrorStatus;
  * @author Tomaž
  */
 public class BasicMatrixMulTestCase extends AbstractTestCase {
-
+ 
   @Override
   public BasicMatrixMulInput getInput() {
     return (BasicMatrixMulInput) super.getInput(); 
