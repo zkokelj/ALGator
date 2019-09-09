@@ -1,0 +1,12 @@
+{
+  "TestSet": {
+    "Name"             : "TestSet1",
+    "ShortName"        : "TS1",
+    "Description"      : "Graphs with number of nodes from 50 to 500 (step 50)",
+    "N"                : "50",
+    "TestRepeat"       : "5",
+    "TimeLimit"        : "",
+    "TestSetFiles"     : ["TestSet1/*"]
+    "TestSetDescHTML"  : "TestSet1.html"
+  }
+}
