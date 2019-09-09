@@ -3,7 +3,11 @@
   "Description": "Maximum Flow Problem",
   "Author": "Ziga Kokelj",
   "Date": "07, 2019",
-  "Algorithms": ["FordFulkerson"],
+  "Algorithms": [
+    "FordFulkerson",
+    "Dinics",
+    "EdmondsKarp"
+  ],
   "TestSets": [
     "TestSet1",
     "TestSet2",

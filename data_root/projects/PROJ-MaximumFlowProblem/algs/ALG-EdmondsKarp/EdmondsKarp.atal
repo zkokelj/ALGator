@@ -1,0 +1,16 @@
+{
+  "Algorithm" : {	
+
+   "Name"           : "EdmondsKarp",            
+   "Description"    : "A specialization of Ford–Fulkerson algorithm, finding augmenting paths with breadth-first search.",
+   "Author"         : "Romi",
+   "Date"           : "09, 2019",
+
+   "Language"       : "Java",
+   "Presenters"     : [],
+
+   "AlgorithmDescHTML" : "algorithm.html",
+   "AlgorithmRefHTML"  : "references.html"
+
+  }
+} 
