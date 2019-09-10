@@ -6,7 +6,7 @@
     "N"                : "50",
     "TestRepeat"       : "5",
     "TimeLimit"        : "",
-    "TestSetFiles"     : ["TestSet1/*"]
+    "TestSetFiles"     : ["TestSet1/*"],
     "TestSetDescHTML"  : "TestSet1.html"
   }
 }
