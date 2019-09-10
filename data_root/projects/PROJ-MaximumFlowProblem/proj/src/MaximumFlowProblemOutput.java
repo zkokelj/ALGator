@@ -40,20 +40,15 @@ public class MaximumFlowProblemOutput extends AbstractOutput {
       case "Check":
         // Tu moramo klicati checkValidity in podati vse zahtevane parametre (originalen graf, graf rešitve, # vozlisc, izvor, ponor)
         // funkcija nato vrne true//false => OK/nOK
-        //if (checkValidity(g1, algorithmOutput.g, n, s, t)){
-        //  return "OK";
-        //}else{
-        //  return "nOK";
-        //}
-
-
-
-        return "nOK";
+        if (checkValidity(maximumFlowProblemTestCase.getInput().g, maximumFlowProblemAlgorithmOutput.g , maximumFlowProblemTestCase.getInput().n, maximumFlowProblemTestCase.getInput().s , maximumFlowProblemTestCase.getInput().t)){
+          return "OK";
+        }else{
+          return "nOK";
+        }
 
       case "QualityOfResult":
         // Tu moramo na podlagi flow-a izracunati vrednost. Po kaksni formuli naj jo iztacunava? (Je spodnja vrstica pravilna?)
-        //return 100 - Math.abs( maximumFlowProblemTestCase.getExpectedOutput().flow -  algorithmOutput.flow);
-        return 1;
+        return Math.abs(maximumFlowProblemAlgorithmOutput.flow - maximumFlowProblemTestCase.flow);
     }
     
     return null;

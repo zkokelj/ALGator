@@ -29,6 +29,8 @@ class StoreDataFromFile {
 
 public class MaximumFlowProblemTestCase extends AbstractTestCase {
 
+    int flow;
+
   @Override
   public MaximumFlowProblemInput getInput() {
     return (MaximumFlowProblemInput) super.getInput(); 
@@ -43,6 +45,7 @@ public class MaximumFlowProblemTestCase extends AbstractTestCase {
 
   @Override
   public MaximumFlowProblemTestCase getTestCase(String testCaseDescriptionLine, String path) {
+    System.out.println("getTestCase");
     // create a set of variables ...
     Variables inputParameters = new Variables();
     inputParameters.setVariable("Path", path);

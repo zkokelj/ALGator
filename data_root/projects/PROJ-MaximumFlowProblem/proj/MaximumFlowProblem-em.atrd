@@ -11,7 +11,7 @@
       }
     ], 
 
-    "IndicatorOrder" : ["Tmin", "Check"],
+    "IndicatorOrder" : ["Tmin", "QualityOfResult", "Check"],
     "Indicators":   [	    
       {
        "Name"        : "Tmin",             
@@ -21,7 +21,7 @@
       },
       {
        "Name"        : "QualityOfResult",             
-       "Description" : "Quality of result", 
+       "Description" : "Quality of result (how far from optimal solution is the returned solution", 
        "Type"        : "int"       
       },
       {

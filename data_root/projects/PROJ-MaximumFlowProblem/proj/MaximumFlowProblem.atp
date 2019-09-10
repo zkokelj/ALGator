@@ -12,7 +12,10 @@
     "TestSet1",
     "TestSet2",
     "TestSet3",
-    "TestSet4"
+    "TestSet4",
+    "TestSet10",
+    "TestSet00",
+    "TestSet000"
   ],
   "ProjectJARs": [],
   "AlgorithmJARs": [],
