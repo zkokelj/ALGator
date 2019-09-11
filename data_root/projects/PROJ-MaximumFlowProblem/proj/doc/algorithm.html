@@ -6,25 +6,34 @@ tr.spaceUnder>td {
 </style>
 
 
-<p>    ... please edit %thisfile% to provide a detailed description about the algorithm for the MaximumFlowProblem project. </p>
+<p> Maximum flow problem involve finding maximum feasible flow through network/graph with single source and single sink. 
+ <br> Vertices are connected with edges. Each edge has a capacity. Main goal is to figure out maximum possible flow. 
+We have to take into account limitations of edge capacities and that in each vertex input and output flows should be equal. <br></p>
 
 
 <table>
 <tr class="spaceUnder"><td><b>Input:</b></td>
-    <td>...</td>
+    <td>Graph g - (with list of connected neighbours)</td>
+    <td>n - number of verices </td>
+    <td>s - index of source vertex </td>
+    <td>t - index of sink vertex </td>
 </tr>
 
 <tr class="spaceUnder"><td><b>Output:</b></td> 
-    <td>...</td>
+    <td>flow - maximum possible flow from source to sink</td>
+    <td>graph g - graph of flows that produce maximum flow from source to sink</td>
 </tr>
 
 <tr class="spaceUnder"><td><b>Test of correctness: &nbsp;&nbsp;&nbsp;</b></td> 
-    <td>...</td>
+    <td>If flow is equal to expected maximal flow</td>
+    <td>In returneg graph respects all limitaions of input graph</td>
 </tr>
 
 
 <tr class="spaceUnder"><td valign=top><b>Implementation:</b></td>
-    <td>...</td>        
+    <td>Dinics algorithm</td>
+    <td>EdmonsKarp algorithm</td>
+    <td>FordFulkerson algorithm</td>        
 </tr>
 
 </table>
