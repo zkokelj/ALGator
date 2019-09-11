@@ -1,3 +1,4 @@
+import java.io.File;
 import si.fri.algotest.entities.Variables;
 import si.fri.algotest.execute.AbstractTestCase;
 import si.fri.algotest.global.ErrorStatus;
@@ -60,12 +61,13 @@ public class MaximumFlowProblemTestCase extends AbstractTestCase {
     inputParameters.setVariable("Name",      params[0]);
     inputParameters.setVariable("Group",     params[1]);
     inputParameters.setVariable("N",         params[2]);
+    inputParameters.setVariable("M",         params[3]);    // kaj je to?
+    inputParameters.setVariable("Filename",      params[4]);
+    inputParameters.setVariable("Type",      params[5]);
 
-    if (params[1].toUpperCase().equals("FILE")) {
-      inputParameters.setVariable("Filename", params.length > 3 ? params[3] : "");
-    }
 
     // ... and finally, create a test case determined by these parameters
+    System.out.println("generateTestCase(inputParameters)");
     return generateTestCase(inputParameters);
   } 
 
@@ -86,12 +88,8 @@ public class MaximumFlowProblemTestCase extends AbstractTestCase {
     
     if (group.equals("FILE")){
       //String path je absolutna pot
+      System.out.println(new File(path + File.separator + filename));
       StoreDataFromFile data = MaximumFlowProblemTools.readFile(path, filename);
-      //System.out.println("n " + data.n);
-      //System.out.println("g " + Arrays.deepToString(data.g));
-      //System.out.println("s " + data.s);
-      //System.out.println("t " + data.t);
-      //System.out.println("flow " + data.flow);
       numOfNodes = data.n;
       g = data.g;
       source = data.s;
