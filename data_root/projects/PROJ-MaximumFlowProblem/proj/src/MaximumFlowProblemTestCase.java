@@ -42,32 +42,27 @@ public class MaximumFlowProblemTestCase extends AbstractTestCase {
     return (MaximumFlowProblemOutput) super.getExpectedOutput();
   }
   
-  
 
   @Override
   public MaximumFlowProblemTestCase getTestCase(String testCaseDescriptionLine, String path) {
-    System.out.println("getTestCase");
     // create a set of variables ...
     Variables inputParameters = new Variables();
     inputParameters.setVariable("Path", path);
     
     String[] params = testCaseDescriptionLine.split(":");
-    if (params.length < 3) {
+    if (params.length < 6) {
       ErrorStatus.setLastErrorMessage(ErrorStatus.ERROR, "Invalid testset file - line ");
       return null;
     }
 
-    //TODO: Preveri parametre, ce so vsi potrebni in ce je treba kakega dodati.
     inputParameters.setVariable("Name",      params[0]);
     inputParameters.setVariable("Group",     params[1]);
     inputParameters.setVariable("N",         params[2]);
-    inputParameters.setVariable("M",         params[3]);    // kaj je to?
+    inputParameters.setVariable("E",         params[3]);    // kaj je to?
     inputParameters.setVariable("Filename",      params[4]);
     inputParameters.setVariable("Type",      params[5]);
 
-
     // ... and finally, create a test case determined by these parameters
-    System.out.println("generateTestCase(inputParameters)");
     return generateTestCase(inputParameters);
   } 
 
@@ -75,7 +70,8 @@ public class MaximumFlowProblemTestCase extends AbstractTestCase {
   public MaximumFlowProblemTestCase generateTestCase(Variables inputParameters) {
     // Get input parameters from getTestCase method
     String path      = inputParameters.getVariable("Path",    "")   .getStringValue();              
-    int N            = inputParameters.getVariable("N",        1000).getIntValue();              
+    int N            = inputParameters.getVariable("N",        1000).getIntValue();
+    int E            = inputParameters.getVariable("E",        1000).getIntValue();
     String group     = inputParameters.getVariable("Group",   "RND").getStringValue().toUpperCase();              
     String filename = inputParameters.getVariable("Filename", "").getStringValue();              
     
@@ -87,8 +83,6 @@ public class MaximumFlowProblemTestCase extends AbstractTestCase {
     int flow = 0;
     
     if (group.equals("FILE")){
-      //String path je absolutna pot
-      System.out.println(new File(path + File.separator + filename));
       StoreDataFromFile data = MaximumFlowProblemTools.readFile(path, filename);
       numOfNodes = data.n;
       g = data.g;
@@ -98,7 +92,6 @@ public class MaximumFlowProblemTestCase extends AbstractTestCase {
     }else{
       System.out.println("ERROR IN TEST FILE!");
     }
-    
 
     // Create a test case 
     MaximumFlowProblemTestCase maximumFlowProblemTestCase = new MaximumFlowProblemTestCase();                
@@ -107,7 +100,5 @@ public class MaximumFlowProblemTestCase extends AbstractTestCase {
     maximumFlowProblemTestCase.setExpectedOutput(new MaximumFlowProblemOutput(g, flow));
     
     return maximumFlowProblemTestCase;
-    
   }
-
 }

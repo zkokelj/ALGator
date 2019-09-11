@@ -11,8 +11,6 @@ public class FordFulkersonAlgorithm extends MaximumFlowProblemAbsAlgorithm {
     @Override
     protected MaximumFlowProblemOutput execute(MaximumFlowProblemInput input) {
         
-        System.out.println("execute Ford Fulkerson");
-
         int numberOfNodes = input.n;
         int[][] adjMatrix = input.g;
         int s = input.s;
@@ -24,8 +22,6 @@ public class FordFulkersonAlgorithm extends MaximumFlowProblemAbsAlgorithm {
         int [][] resultAdjMatrix = solver.getAdjMatrix(numberOfNodes);
 
         MaximumFlowProblemOutput output = new MaximumFlowProblemOutput(resultAdjMatrix, flow);
-        
-        System.out.println("execute Ford Fulkerson");     
         
         return output;
     }

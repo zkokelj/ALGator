@@ -3,7 +3,7 @@ import si.fri.algotest.execute.AbstractTestCase;
 
 /**
  * 
- * @author ...
+ * @author Ziga Kokelj
  */
 public class MaximumFlowProblemOutput extends AbstractOutput {
 
