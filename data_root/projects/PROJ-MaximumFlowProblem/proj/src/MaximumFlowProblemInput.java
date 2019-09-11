@@ -1,7 +1,4 @@
 import si.fri.algotest.execute.AbstractInput;
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * @author Ziga Kokelj
  */

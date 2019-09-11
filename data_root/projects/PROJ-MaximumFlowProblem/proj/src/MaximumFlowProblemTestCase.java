@@ -1,4 +1,3 @@
-import java.io.File;
 import si.fri.algotest.entities.Variables;
 import si.fri.algotest.execute.AbstractTestCase;
 import si.fri.algotest.global.ErrorStatus;

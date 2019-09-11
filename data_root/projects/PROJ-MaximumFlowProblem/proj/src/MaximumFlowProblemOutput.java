@@ -48,7 +48,8 @@ public class MaximumFlowProblemOutput extends AbstractOutput {
 
       case "QualityOfResult":
         // Tu moramo na podlagi flow-a izracunati vrednost. Po kaksni formuli naj jo iztacunava? (Je spodnja vrstica pravilna?)
-        return Math.abs(maximumFlowProblemAlgorithmOutput.flow - maximumFlowProblemTestCase.flow);
+        double returnValue = Math.abs(maximumFlowProblemAlgorithmOutput.flow - maximumFlowProblemTestCase.getExpectedOutput().flow) / maximumFlowProblemTestCase.getExpectedOutput().flow;
+        return returnValue;
     }
     
     return null;

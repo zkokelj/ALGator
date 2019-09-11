@@ -1,11 +1,17 @@
 {
   "Result":
   { 
-    "ParameterOrder" : ["N"],
+    "ParameterOrder" : ["N", "E"],
     "Parameters":   [	    
       {
        "Name"         : "N",             
-       "Description"  : "The size of the test", 
+       "Description"  : "Number od nodes in the graph", 
+       "Type"         : "int",  
+       "Meta"         : {"Default": 1000, "Min": 2, "Step": 1000}     
+      },
+       {
+       "Name"         : "E",             
+       "Description"  : "Number od edges in the graph", 
        "Type"         : "int",  
        "Meta"         : {"Default": 1000, "Min": 2, "Step": 1000}     
       }
@@ -22,7 +28,7 @@
       {
        "Name"        : "QualityOfResult",             
        "Description" : "Quality of result (how far from optimal solution is the returned solution", 
-       "Type"        : "int"       
+       "Type"        : "float"       
       },
       {
        "Name"        : "Check",             
