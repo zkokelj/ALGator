@@ -1,8 +1,8 @@
 {"Project": {
   "Name": "MaximumFlowProblem",
   "Description": "Maximum Flow Problem",
-  "Author": "Ziga Kokelj",
-  "Date": "07, 2019",
+  "Author": "Romi Kozelj, Ziga Kokelj",
+  "Date": "09, 2019",
   "Algorithms": [
     "FordFulkerson",
     "Dinics",
