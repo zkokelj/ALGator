@@ -29,8 +29,8 @@
         "TestSet2"
       ]
     }, 
-    "ShortTitle": "Dinics vs EdmonsKarp on TestSet2", 
-    "Title": "Dinics vs EdmonsKarp on TestSet2", 
+    "ShortTitle": "Dinics vs Edmonds Karp on TestSet2", 
+    "Title": "Dinics vs Edmonds Karp on TestSet2", 
     "categoryLabels": false, 
     "graphType": "line", 
     "gridX": true, 

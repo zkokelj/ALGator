@@ -29,8 +29,8 @@
         "TestSet4"
       ]
     }, 
-    "ShortTitle": "Dinics vs EdmonsKart algorithm on TestSet4", 
-    "Title": "Dinics vs EdmonsKart algorithm on TestSet4", 
+    "ShortTitle": "Dinics vs Edmonds Karp algorithm on TestSet4", 
+    "Title": "Dinics vs Edmonds Karp algorithm on TestSet4", 
     "categoryLabels": false, 
     "graphType": "line", 
     "gridX": true, 
