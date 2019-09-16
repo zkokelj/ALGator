@@ -1,4 +1,9 @@
 <html>
-    This presenter presents all three algorithms on same test set (TestSet2). 
-As we can see from the graph times of execution Dinic's algorithm is faster than Ford Fulkerson and EdmonsKarp's on all test cases in this set.
+    This presenter presents execution times of all three algorithms on TestSet2. 
+    Time complexities for algortihms are:
+    <br>Edmonds: O(VE^2)
+    <br>Dinics: O(EV^2)
+    <br>Ford Fulkerson: O(flow*E)
+    <br> Since TestSet2 contains networks with high flow values (which slows down FordFulkerson algorithm) 
+    and high number of edges (which slows down Edmonds algorithm) Dinic's algorithm is the fastest on all test cases in this set.
 </html>
