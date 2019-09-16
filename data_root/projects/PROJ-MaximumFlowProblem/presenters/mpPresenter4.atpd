@@ -5,7 +5,8 @@
     "HasTable": true, 
     "Query": {
       "Algorithms": [
-        "FordFulkerson"
+        "Dinics", 
+        "EdmondsKarp"
       ], 
       "ComputerID": "", 
       "Count": "0", 
@@ -28,8 +29,8 @@
         "TestSet2"
       ]
     }, 
-    "ShortTitle": "FordFulkerson on TestSet2", 
-    "Title": "FordFulkerson on TestSet2", 
+    "ShortTitle": "Dinics vs EdmonsKarp on TestSet2", 
+    "Title": "Dinics vs EdmonsKarp on TestSet2", 
     "categoryLabels": false, 
     "graphType": "line", 
     "gridX": true, 
@@ -38,12 +39,12 @@
     "hasTable": true, 
     "logScale": false, 
     "manData": {}, 
-    "name": "mpPresenter1", 
+    "name": "mpPresenter4", 
     "subchart": false, 
     "xAxis": "N", 
     "xAxisTitle": "Number of Nodes", 
     "yAxes": [
-      "FordFulkerson.Tmin"
+      "*.Tmin"
     ], 
     "yAxisTitle": "Min. Time", 
     "zoom": true
